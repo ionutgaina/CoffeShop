@@ -1,0 +1,32 @@
+{
+    "product": [
+      {
+        "id": 1,
+        "name": "cafea",
+        "quatity": 5,
+        "price": 5,
+        "description":[""],
+        "comments":[""],
+        "rating": []
+      },
+      {
+        "id": 2,
+        "name": "cappucino",
+        "quatity": 100,
+        "price": 15,
+        "description":[""],
+        "comments":[""],
+        "rating": []
+      },
+      {
+        "id": 3,
+        "name": "latte",
+        "quatity": 2,
+        "price": 10,
+        "description":[""],
+        "comments":[""],
+        "rating": []
+      }
+    ]
+  }
+
