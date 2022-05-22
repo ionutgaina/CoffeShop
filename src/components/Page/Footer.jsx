@@ -1,8 +1,8 @@
 export const Footer = () => {
   return (
-    <footer className="grid place-items-center bg-yellow-500 p-5">
+    <footer className="grid place-items-center text-black bg-primary p-5">
       © 2021 Copyright:
-      <a href="https://tailwind-elements.com/">&nbsp;Găină Ionuț</a>
+      <a href="https://github.com/ionutgaina">&nbsp;Ionuț Găină</a>
     </footer>
   );
 };

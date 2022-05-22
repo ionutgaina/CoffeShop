@@ -1,32 +1,58 @@
 {
-    "product": [
-      {
-        "id": 1,
-        "name": "cafea",
-        "quatity": 5,
-        "price": 5,
-        "description":[""],
-        "comments":[""],
-        "rating": []
-      },
-      {
-        "id": 2,
-        "name": "cappucino",
-        "quatity": 100,
-        "price": 15,
-        "description":[""],
-        "comments":[""],
-        "rating": []
-      },
-      {
-        "id": 3,
-        "name": "latte",
-        "quatity": 2,
-        "price": 10,
-        "description":[""],
-        "comments":[""],
-        "rating": []
-      }
-    ]
-  }
-
+  "products": [
+    {
+      "id": 1,
+      "name": "cafea",
+      "image": "https://images.unsplash.com/photo-1522992319-0365e5f11656?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687",
+      "quantity": 5,
+      "price": 5,
+      "description": "random description",
+      "comments": [
+        ""
+      ],
+      "rating": [
+        5,
+        2,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "name": "cappucino",
+      "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1337",
+      "quantity": 100,
+      "price": 15,
+      "description": "another random description",
+      "comments": [
+        ""
+      ],
+      "rating": [
+        5,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 3,
+      "name": "latte",
+      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687",
+      "quantity": 2,
+      "price": 10,
+      "description": "a good latte",
+      "comments": [
+        ""
+      ],
+      "rating": [
+        0
+      ]
+    }
+  ],
+  "contact": [
+    {
+      "name": "Gaina Ionut",
+      "email": "gainaionutz@gmail.com",
+      "message": "421421",
+      "id": 1
+    }
+  ]
+}
