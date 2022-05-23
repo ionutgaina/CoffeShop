@@ -8,15 +8,18 @@ export const AdminProduct = (props) => {
   const ProductModal = async (ProductInfo) => {
     let rating = ProductInfo.rating;
 
+    // Verify if rating exist to display a friendly response
     rating === undefined
       ? (rating = "not having ")
       : (rating = "having " + rating);
 
+    // The modal with product information
     const result = await Swal.fire({
       imageUrl: ProductInfo.image,
       imageWidth: 200,
       imageHeight: 200,
       title: ProductInfo.name + " " + ProductInfo.price + " LEI",
+      // html is a prop which you can put html instead of plain text in content
       html:
         "<b> Description </b> <p>" +
         ProductInfo.description +
@@ -34,17 +37,33 @@ export const AdminProduct = (props) => {
     });
     // When press Delete button
     if (result.isConfirmed) {
-      deleteProduct(ProductInfo.id).then((r) => {
-        Swal.fire({
-          title: "The product was deleted",
+      deleteProduct(ProductInfo.id)
+        .then((r) => {
+          // Popup if it was succesfully deleted
+          Swal.fire({
+            title: "The product was deleted",
 
-          timer: 2000,
-          willClose: () => {
-            // We need to reload the page for see the updated menu
-            window.location.reload();
-          },
+            timer: 2000,
+            willClose: () => {
+              // We need to reload the page for see the updated menu
+              window.location.reload();
+            },
+          });
+        })
+        .catch((e) => {
+          // Popup if it was an error
+          let response = "Error";
+
+          Swal.fire({
+            title: response,
+            icon: "error",
+            timer: 1500,
+            position: "top-end",
+            showConfirmButton: false,
+          });
+
+          throw e;
         });
-      });
       // When press Update button
     } else if (result.isDenied) {
       nav("/admin/update", { state: ProductInfo });

@@ -6,6 +6,7 @@ export const UpdateProduct = () => {
     const location = useLocation();
     const nav = useNavigate();
 
+    // Verifiy if the data is stored from /admin page
     if ( !location.state )
         nav("/admin");
         

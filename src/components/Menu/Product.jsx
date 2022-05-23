@@ -4,15 +4,18 @@ export const Product = (props) => {
   const ProductModal = (ProductInfo) => {
     let rating = ProductInfo.rating;
 
+    // Verify if rating exist to display a friendly response
     rating === undefined
       ? (rating = "not having ")
       : (rating = "having " + rating);
 
+    // The modal with product information
     return Swal.fire({
       imageUrl: ProductInfo.image,
       imageWidth: 200,
       imageHeight: 200,
       title: ProductInfo.name + " " + ProductInfo.price + " LEI",
+      // html is a prop which you can put html instead of plain text in content
       html:
         "<b> Description </b> <p>" +
         ProductInfo.description +

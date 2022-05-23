@@ -26,7 +26,7 @@ export const MenuList = ({ mykey, sort }) => {
   useEffect(() => {
     setIsLoading(true);
     getProducts().then((r) => {
-      // switch case but in inline if
+      // switch case but in inline if for select a good sorting function
       mykey == "name"
         ? setProducts(
             r.data.sort(
@@ -72,9 +72,12 @@ export const MenuList = ({ mykey, sort }) => {
         </svg>
       ) : (
         <div className="container grid grid-cols-2 md:grid-cols-4 gap-2 pb-2 md:gap-14 md:pb-14 mx-auto">
-          {products.map((product) => (
-            <Product props={product} />
-          ))}
+          {
+            // here we render the products
+            products.map((product) => (
+              <Product props={product} />
+            ))
+          }
         </div>
       )}
     </div>

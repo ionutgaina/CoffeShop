@@ -8,6 +8,8 @@ export const AdminList = () => {
 
   useEffect(() => {
     setIsLoading(true);
+
+    // Get data from api
     getProducts().then((r) => {
       setProducts(r.data);
       setIsLoading(false);
@@ -35,9 +37,12 @@ export const AdminList = () => {
         </svg>
       ) : (
         <div className="container grid grid-cols-2 md:grid-cols-4 gap-2 pb-2 md:gap-14 md:pb-14 mx-auto">
-          {products.map((product) => (
-            <AdminProduct props={product} />
-          ))}
+          {
+            // Here we render all products from get request
+            products.map((product) => (
+              <AdminProduct props={product} />
+            ))
+          }
         </div>
       )}
     </div>
