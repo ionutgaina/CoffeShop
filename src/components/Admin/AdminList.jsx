@@ -1,53 +1,18 @@
-import { Product } from "./Product";
+import { AdminProduct } from "./AdminProduct";
 import { getProducts } from "../../api/requests";
 import { useState, useEffect } from "react";
 
-export const MenuList = ({ mykey, sort}) => {
+export const AdminList = () => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const sort_by = (field, reverse, primer) => {
-    const key = primer
-      ? function (x) {
-          return primer(x[field]);
-        }
-      : function (x) {
-          return x[field];
-        };
-
-    reverse = !reverse ? 1 : -1;
-
-    return function (a, b) {
-      return (a = key(a)), (b = key(b)), reverse * ((a > b) - (b > a));
-    };
-  };
-
   useEffect(() => {
     setIsLoading(true);
-    console.log(mykey);
-    console.log(sort);
     getProducts().then((r) => {
-      mykey == "name"
-      ? setProducts(
-          r.data.sort(
-            sort_by("name", "Descending" == sort, (a) => a.toUpperCase())
-          )
-        )
-      : mykey == "quantity"
-      ? setProducts(
-          r.data.sort(sort_by("quantity", "Descending" == sort, parseInt()))
-        )
-      : mykey == "price"
-      ? setProducts(
-          r.data.sort(sort_by("price", "Descending" == sort, parseInt()))
-        )
-      : setProducts(r.data);
-
-        console.log(mykey);
-      console.log(products);
+      setProducts(r.data);
       setIsLoading(false);
     });
-  }, [sort, mykey]);
+  }, []);
 
   return (
     <div className={"pt-14"}>
@@ -71,7 +36,7 @@ export const MenuList = ({ mykey, sort}) => {
       ) : (
         <div className="container grid grid-cols-2 md:grid-cols-4 gap-2 pb-2 md:gap-14 md:pb-14 mx-auto">
           {products.map((product) => (
-            <Product props={product} />
+            <AdminProduct props={product} />
           ))}
         </div>
       )}

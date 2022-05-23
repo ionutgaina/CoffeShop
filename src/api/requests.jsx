@@ -21,3 +21,28 @@ export function getProducts() {
     },
   });
 }
+
+export function postProduct(data) {
+  return instance.post("/products", data, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+}
+
+export function deleteProduct(id) {
+  return instance.delete("/products/" + id, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+}
+
+export function updateProduct(id) {
+  return instance.put("/products/" + id, {
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+}
+
