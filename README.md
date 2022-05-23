@@ -3,7 +3,7 @@ Getting started
 
 
 For installing all dependecies
-### npm -i
+### npm i
 
 To start the "server"
 ### npx server-json --watch src/api/db.json --port 3000
