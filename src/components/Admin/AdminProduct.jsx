@@ -1,9 +1,10 @@
 import Swal from "sweetalert2";
 import { deleteProduct } from "../../api/requests";
-
 import { useNavigate } from "react-router-dom";
 
 export const AdminProduct = (props) => {
+  const nav = useNavigate();
+
   const ProductModal = async (ProductInfo) => {
     let rating = ProductInfo.rating;
 
@@ -16,13 +17,22 @@ export const AdminProduct = (props) => {
       imageWidth: 200,
       imageHeight: 200,
       title: ProductInfo.name + " " + ProductInfo.price + " LEI",
-      text: ProductInfo.description,
+      html:
+        "<b> Description </b> <p>" +
+        ProductInfo.description +
+        "</p> <br> <b> Comment:</b> <p> " +
+        ProductInfo.comments +
+        "</p>",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
+      showDenyButton: true,
+      confirmButtonColor: "red",
+      cancelButtonColor: "blue",
+      denyButtonColor: "orange",
       footer: "<p>this product is " + rating + " stars</p>",
-      confirmButtonText: "Delete product!",
+      confirmButtonText: `Delete product!`,
+      denyButtonText: `Update product!`,
     });
+    // When press Delete button
     if (result.isConfirmed) {
       deleteProduct(ProductInfo.id).then((r) => {
         Swal.fire({
@@ -30,10 +40,14 @@ export const AdminProduct = (props) => {
 
           timer: 2000,
           willClose: () => {
+            // We need to reload the page for see the updated menu
             window.location.reload();
           },
         });
       });
+      // When press Update button
+    } else if (result.isDenied) {
+      nav("/admin/update", { state: ProductInfo });
     }
   };
 
@@ -50,7 +64,6 @@ export const AdminProduct = (props) => {
         src={ProductInfo.image}
         alt={"product " + ProductInfo.id}
       />
-
       <p
         className="bg-primary text-black text-xs md:text-base
       font-bold w-1/2 md:w-full m-auto md:py-3 mb-1"

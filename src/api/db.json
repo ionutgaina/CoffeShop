@@ -3,80 +3,43 @@
     {
       "name": "Coffee",
       "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1337",
-      "quantity": 5,
-      "price": 123,
-      "comments": "afdafafdaf",
-      "description": "fadfaf",
-      "rating": 2,
-      "id": 10
+      "quantity": 6,
+      "price": 10,
+      "comments": "I like this coffe",
+      "description": "Made with passion",
+      "rating": 5,
+      "id": 3
     },
     {
-      "name": "Coffee",
-      "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1337",
-      "quantity": 5,
-      "price": 123,
-      "comments": "afdafafdaf",
-      "description": "fadfaf",
-      "rating": 2,
-      "id": 10
+      "name": "Espresso",
+      "image": "https://images.unsplash.com/photo-1515442261605-65987783cb6a?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170",
+      "quantity": 10,
+      "price": 15,
+      "comments": "You need to try this",
+      "description": "The energy here begins",
+      "rating": 4,
+      "id": 4
     },
     {
-      "name": "Coffee",
-      "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1337",
+      "name": "Cappucino",
+      "image": "https://images.unsplash.com/photo-1588483977150-9c2127ab7bcc?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687",
       "quantity": 5,
-      "price": 123,
-      "comments": "afdafafdaf",
-      "description": "fadfaf",
-      "rating": 2,
-      "id": 10
+      "price": 20,
+      "comments": "I like it!",
+      "description": "With milk from our farmers <3",
+      "rating": 5,
+      "id": 5
     },
     {
-      "name": "Coffee",
-      "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1337",
-      "quantity": 5,
-      "price": 123,
-      "comments": "afdafafdaf",
-      "description": "fadfaf",
+      "name": "Latte",
+      "image": "https://images.unsplash.com/photo-1615860291946-62f346ab7e63?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765",
+      "quantity": 0,
+      "price": 25,
+      "comments": "Mehh, it's ok",
+      "description": "A big cup of pleasure",
       "rating": 2,
-      "id": 10
-    },
-    {
-      "name": "Coffee",
-      "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1337",
-      "quantity": 5,
-      "price": 123,
-      "comments": "afdafafdaf",
-      "description": "fadfaf",
-      "rating": 2,
-      "id": 10
-    },
-    {
-      "name": "Coffee",
-      "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1337",
-      "quantity": 5,
-      "price": 123,
-      "comments": "afdafafdaf",
-      "description": "fadfaf",
-      "rating": 2,
-      "id": 10
-    },
-    {
-      "name": "Coffee",
-      "image": "https://images.unsplash.com/photo-1541167760496-1628856ab772?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1337",
-      "quantity": 5,
-      "price": 123,
-      "comments": "afdafafdaf",
-      "description": "fadfaf",
-      "rating": 2,
-      "id": 10
+      "id": 6
     }
   ],
-  "contact": [
-    {
-      "name": "Gaina Ionut",
-      "email": "gainaionutz@gmail.com",
-      "message": "421421",
-      "id": 1
-    }
-  ]
+  "contact": []
 }

@@ -2,10 +2,11 @@ import { Product } from "./Product";
 import { getProducts } from "../../api/requests";
 import { useState, useEffect } from "react";
 
-export const MenuList = ({ mykey, sort}) => {
+export const MenuList = ({ mykey, sort }) => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
+  // sort function
   const sort_by = (field, reverse, primer) => {
     const key = primer
       ? function (x) {
@@ -24,27 +25,28 @@ export const MenuList = ({ mykey, sort}) => {
 
   useEffect(() => {
     setIsLoading(true);
-    console.log(mykey);
-    console.log(sort);
     getProducts().then((r) => {
+      // switch case but in inline if
       mykey == "name"
-      ? setProducts(
-          r.data.sort(
-            sort_by("name", "Descending" == sort, (a) => a.toUpperCase())
+        ? setProducts(
+            r.data.sort(
+              sort_by("name", "Descending" == sort, (a) => a.toUpperCase())
+            )
           )
-        )
-      : mykey == "quantity"
-      ? setProducts(
-          r.data.sort(sort_by("quantity", "Descending" == sort, parseInt()))
-        )
-      : mykey == "price"
-      ? setProducts(
-          r.data.sort(sort_by("price", "Descending" == sort, parseInt()))
-        )
-      : setProducts(r.data);
+        : mykey == "quantity"
+        ? setProducts(
+            r.data.sort(sort_by("quantity", "Descending" == sort, parseInt()))
+          )
+        : mykey == "price"
+        ? setProducts(
+            r.data.sort(sort_by("price", "Descending" == sort, parseInt()))
+          )
+        : mykey == "rating"
+        ? setProducts(
+            r.data.sort(sort_by("rating", "Descending" == sort, parseInt()))
+          )
+        : setProducts(r.data);
 
-        console.log(mykey);
-      console.log(products);
       setIsLoading(false);
     });
   }, [sort, mykey]);

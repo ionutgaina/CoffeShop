@@ -38,11 +38,6 @@ export function deleteProduct(id) {
   });
 }
 
-export function updateProduct(id) {
-  return instance.put("/products/" + id, {
-    headers: {
-      "Content-Type": "application/json",
-    }
-  })
+export function updateProduct(id, data) {
+  return instance.patch("/products/" + id, data);
 }
-

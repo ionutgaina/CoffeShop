@@ -5,6 +5,7 @@ import { Contact } from "../src/pages/Contact";
 import { Menu } from "../src/pages/Menu";
 import { Admin } from "../src/pages/Admin";
 import { CreateProduct } from "../src/pages/CreateProduct";
+import { UpdateProduct } from "../src/pages/UpdateProduct";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/admin" element ={<Admin />} />
           <Route path="/admin/create" element={<CreateProduct />} />
+          <Route path="/admin/update" element={<UpdateProduct />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -2,18 +2,23 @@ import Swal from "sweetalert2";
 
 export const Product = (props) => {
   const ProductModal = (ProductInfo) => {
-    let rating =
-      ProductInfo.rating.reduce((a, b) => a + b) / ProductInfo.rating.length;
-    rating = Math.round(rating * 10) / 10;
+    let rating = ProductInfo.rating;
 
-    rating === 0 ? (rating = "not having ") : (rating = "having " + rating);
+    rating === undefined
+      ? (rating = "not having ")
+      : (rating = "having " + rating);
 
     return Swal.fire({
       imageUrl: ProductInfo.image,
       imageWidth: 200,
       imageHeight: 200,
       title: ProductInfo.name + " " + ProductInfo.price + " LEI",
-      text: ProductInfo.description,
+      html:
+        "<b> Description </b> <p>" +
+        ProductInfo.description +
+        "</p> <br> <b> Comment:</b> <p> " +
+        ProductInfo.comments +
+        "</p>",
       footer: "<p>this product is " + rating + " stars</p>",
     });
   };
